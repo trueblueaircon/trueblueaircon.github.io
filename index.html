@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>True Blue Aircon Cleaning — Capalaba &amp; Bayside</title>
+<meta name="description" content="Proper aircon cleaning for Capalaba and Bayside homes. Not a quick wipe — a real deep clean, filters to coils. Message or call to book.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-900:#123A5E;
+    --navy-800:#0D2E4B;
+    --blue-500:#30739B;
+    --ice-100:#EAF7FB;
+    --sky-300:#A3D8E2;
+    --accent-500:#A8571F;
+    --accent-600:#8F491A;
+    --charcoal-900:#16202B;
+    --white:#FFFFFF;
+    --slat-gap: 10px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--charcoal-900);
+    background:var(--white);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Barlow Condensed', sans-serif;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    line-height:0.98;
+  }
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.02em;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px;}
+
+  /* Vent slat motif — signature element */
+  .vents{
+    height:56px;
+    background:repeating-linear-gradient(
+      180deg,
+      var(--navy-800) 0px,
+      var(--navy-800) 6px,
+      var(--blue-500) 6px,
+      var(--blue-500) 7px,
+      transparent 7px,
+      transparent var(--slat-gap)
+    );
+    background-color:var(--ice-100);
+  }
+  .vents.light{
+    background:repeating-linear-gradient(
+      180deg,
+      var(--ice-100) 0px,
+      var(--ice-100) 6px,
+      #BFD7EA 6px,
+      #BFD7EA 7px,
+      transparent 7px,
+      transparent var(--slat-gap)
+    );
+    background-color:var(--white);
+  }
+
+  /* Header */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:var(--navy-900);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 24px;
+    max-width:1120px; margin:0 auto;
+  }
+  .logo{
+    display:flex; align-items:center; gap:12px; color:var(--white);
+  }
+  .logo img{
+    height:44px; width:44px;
+  }
+  .logo .name{font-size:22px; font-weight:800; font-family:'Barlow Condensed',sans-serif; text-transform:uppercase; letter-spacing:0.03em;}
+  .logo .tag{font-size:10px; color:var(--accent-500); font-family:'IBM Plex Mono',monospace; letter-spacing:0.12em;}
+  .nav-actions{display:flex; align-items:center; gap:12px;}
+  .phone-link{
+    color:var(--white); font-family:'IBM Plex Mono',monospace; font-size:14px;
+    display:none;
+  }
+  @media(min-width:640px){ .phone-link{display:block;} }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:10px 20px;
+    border-radius:2px;
+    font-weight:600; font-size:14px;
+    font-family:'Inter',sans-serif;
+    border:1.5px solid transparent;
+    cursor:pointer;
+    transition:transform 0.15s ease, background 0.15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--accent-500); color:var(--white);}
+  .btn-primary:hover{background:var(--accent-600);}
+  .btn-outline{border-color:rgba(255,255,255,0.35); color:var(--white);}
+  .btn-outline:hover{border-color:var(--accent-500); color:var(--accent-500);}
+
+  /* Hero */
+  .hero{
+    background:var(--navy-900);
+    color:var(--white);
+    position:relative;
+    overflow:hidden;
+    padding:88px 0 72px;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:repeating-linear-gradient(
+      180deg,
+      rgba(255,255,255,0.035) 0px,
+      rgba(255,255,255,0.035) 2px,
+      transparent 2px,
+      transparent 22px
+    );
+    pointer-events:none;
+    animation: driftSlats 30s linear infinite;
+  }
+  @keyframes driftSlats{
+    from{ background-position-y:0; }
+    to{ background-position-y:220px; }
+  }
+  .hero-inner{position:relative; z-index:1; max-width:720px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    color:var(--accent-500);
+    font-size:13px;
+    letter-spacing:0.14em;
+    margin-bottom:18px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{content:""; width:24px; height:2px; background:var(--accent-500); display:inline-block;}
+  .hero h1{
+    font-size:clamp(42px, 7vw, 76px);
+    margin-bottom:20px;
+  }
+  .hero h1 .accent{color:var(--accent-500);}
+  .hero p.lede{
+    font-size:18px;
+    color:var(--sky-300);
+    opacity:0.85;
+    max-width:480px;
+    margin-bottom:32px;
+    font-weight:400;
+  }
+  .hero-ctas{display:flex; flex-wrap:wrap; gap:14px; margin-bottom:40px;}
+  .hero-facts{
+    display:flex; flex-wrap:wrap; gap:28px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    color:var(--sky-300);
+    opacity:0.65;
+    letter-spacing:0.03em;
+  }
+  .hero-facts span{display:flex; align-items:center; gap:8px;}
+  .dot{width:6px; height:6px; border-radius:50%; background:var(--accent-500); display:inline-block;}
+
+  /* Section shell */
+  section{padding:80px 0;}
+  .section-head{max-width:620px; margin-bottom:44px;}
+  .section-head .eyebrow-dark{
+    font-family:'IBM Plex Mono',monospace;
+    color:var(--blue-500);
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    margin-bottom:12px;
+  }
+  .section-head h2{font-size:clamp(30px,4.2vw,44px); color:var(--navy-900);}
+  .section-head p{font-size:17px; color:#45555F; margin-top:14px;}
+
+  /* Problem section */
+  .problem{background:var(--ice-100);}
+  .problem-grid{
+    display:grid; grid-template-columns:1fr; gap:40px; align-items:center;
+  }
+  @media(min-width:860px){ .problem-grid{grid-template-columns:1fr 1fr; gap:56px;} }
+  .problem-photo{position:relative;}
+  .problem-photo img{
+    border-radius:2px;
+    filter:saturate(0.85) contrast(1.05);
+    box-shadow:0 24px 48px -20px rgba(10,31,51,0.35);
+  }
+  .photo-caption{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    color:#5B6E7A;
+    margin-top:10px;
+    letter-spacing:0.02em;
+  }
+  .problem-copy p{font-size:16.5px; color:#33454F; margin-bottom:16px;}
+  .problem-copy p strong{color:var(--navy-900);}
+
+  /* Process */
+  .process-list{
+    display:grid; grid-template-columns:1fr; gap:0;
+    border-top:1px solid #E1E8ED;
+  }
+  .process-item{
+    display:grid; grid-template-columns:64px 1fr; gap:20px;
+    padding:26px 0;
+    border-bottom:1px solid #E1E8ED;
+  }
+  .process-num{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:14px;
+    color:var(--accent-500);
+    padding-top:3px;
+  }
+  .process-item h3{
+    font-size:22px; color:var(--navy-900); margin-bottom:6px; text-transform:none; font-weight:700; letter-spacing:0;
+  }
+  .process-item p{color:#45555F; font-size:15.5px; max-width:560px;}
+
+  /* Services */
+  .services{background:var(--navy-900); color:var(--white);}
+  .services .section-head h2{color:var(--white);}
+  .services .section-head p{color:#B7C7D4;}
+  .service-grid{
+    display:grid; grid-template-columns:1fr; gap:1px;
+    background:rgba(255,255,255,0.1);
+  }
+  @media(min-width:640px){ .service-grid{grid-template-columns:1fr 1fr;} }
+  @media(min-width:960px){ .service-grid{grid-template-columns:1fr 1fr 1fr;} }
+  .service-card{
+    background:var(--navy-900);
+    padding:28px 26px;
+    position:relative;
+  }
+  .service-card .vent-icon{
+    width:30px; height:22px;
+    background:repeating-linear-gradient(180deg, var(--accent-500) 0px, var(--accent-500) 2.5px, transparent 2.5px, transparent 6px);
+    margin-bottom:16px;
+  }
+  .service-card h3{
+    font-family:'Barlow Condensed',sans-serif; font-weight:700; text-transform:uppercase;
+    font-size:19px; letter-spacing:0.02em; margin-bottom:8px; color:var(--white);
+  }
+  .service-card p{font-size:14.5px; color:var(--sky-300); opacity:0.75;}
+
+  /* Service area */
+  .area{background:var(--white);}
+  .chip-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:28px;}
+  .chip{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    padding:9px 16px;
+    border:1px solid #D7E2E8;
+    border-radius:999px;
+    color:var(--navy-800);
+  }
+  .chip.center{background:var(--navy-900); color:var(--white); border-color:var(--navy-900); font-weight:500;}
+
+  /* Gallery */
+  .gallery{background:var(--ice-100);}
+  .gallery-grid{
+    display:grid; grid-template-columns:1fr; gap:24px;
+  }
+  @media(min-width:760px){ .gallery-grid{grid-template-columns:1fr 1fr;} }
+  .gallery-item img{
+    border-radius:2px;
+    box-shadow:0 20px 40px -22px rgba(10,31,51,0.3);
+  }
+  .gallery-item .photo-caption{margin-top:12px;}
+
+  /* CTA / footer */
+  footer{background:var(--navy-900); color:var(--white); padding:72px 0 32px;}
+  .cta-block{
+    text-align:center;
+    max-width:600px;
+    margin:0 auto 56px;
+  }
+  .cta-block h2{font-size:clamp(32px,5vw,52px); color:var(--white); margin-bottom:16px;}
+  .cta-block p{color:#B7C7D4; font-size:16.5px; margin-bottom:32px;}
+  .cta-actions{display:flex; flex-wrap:wrap; gap:14px; justify-content:center;}
+  .footer-bottom{
+    display:flex; flex-wrap:wrap; gap:16px;
+    justify-content:space-between; align-items:center;
+    border-top:1px solid rgba(255,255,255,0.1);
+    padding-top:28px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:#7C93A5;
+  }
+  .footer-bottom .socials{display:flex; gap:18px;}
+  .footer-bottom .socials a:hover{color:var(--accent-500);}
+
+  /* Reveal on scroll */
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity 0.6s ease, transform 0.6s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .hero::before{animation:none;}
+    .reveal{opacity:1; transform:none; transition:none;}
+  }
+
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--accent-500);
+    outline-offset:3px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      <img src="assets/logo.png" alt="True Blue Aircon Cleaning logo">
+      <div>
+        <span class="name" style="display:block;">True Blue</span>
+        <span class="tag">AIRCON CLEANING</span>
+      </div>
+    </div>
+    <div class="nav-actions">
+      <a class="phone-link" href="tel:0406606348">0406 606 348</a>
+      <a class="btn btn-primary" href="https://m.me/trueblueairconcleaning" target="_blank" rel="noopener">Message Us</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="eyebrow">CAPALABA &amp; BAYSIDE, BRISBANE</div>
+    <h1>Proper clean.<br>Not a <span class="accent">quick wipe.</span></h1>
+    <p class="lede">Dust and grime build up inside your aircon even when you can't see it. We get into the filters and coils properly — the parts a surface wipe misses.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="https://m.me/trueblueairconcleaning" target="_blank" rel="noopener">Message to Book</a>
+      <a class="btn btn-outline" href="tel:0406606348">Call 0406 606 348</a>
+    </div>
+    <div class="hero-facts">
+      <span><i class="dot"></i>Split system specialists</span>
+      <span><i class="dot"></i>Local, Capalaba-based</span>
+      <span><i class="dot"></i>Straightforward pricing</span>
+    </div>
+  </div>
+</section>
+
+<div class="vents"></div>
+
+<section class="problem">
+  <div class="wrap">
+    <div class="problem-grid reveal">
+      <div class="problem-photo">
+        <img src="assets/filters.jpg" alt="Aircon filter panels showing dust build-up before cleaning">
+        <p class="photo-caption">FROM A RECENT JOB — FILTER PANELS BEFORE CLEANING</p>
+      </div>
+      <div class="problem-copy">
+        <div class="section-head" style="margin-bottom:20px;">
+          <div class="eyebrow-dark">THE ACTUAL PROBLEM</div>
+          <h2>That musty smell isn't normal.</h2>
+        </div>
+        <p>Dirty filters and dust can <strong>restrict airflow</strong> over time — your unit works harder to cool the same room, and the air moving through it picks up that musty smell.</p>
+        <p>It builds up slowly, so it's easy to miss until it's obvious. A proper clean gets ahead of it before it affects how the unit runs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow-dark">WHAT WE ACTUALLY DO</div>
+      <h2>What happens during a clean</h2>
+      <p>No shortcuts — here's the actual sequence, every visit.</p>
+    </div>
+    <div class="process-list reveal">
+      <div class="process-item">
+        <div class="process-num">01</div>
+        <div>
+          <h3>Check the filters</h3>
+          <p>We pull the filter panels and check the real condition — dust load, mould spotting, wear — before anything else.</p>
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="process-num">02</div>
+        <div>
+          <h3>Clean the coils properly</h3>
+          <p>The coils are where most of the build-up actually sits. We use the right tools to get in there, not just a wipe-down of what's visible.</p>
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="process-num">03</div>
+        <div>
+          <h3>Get the details a quick clean misses</h3>
+          <p>Drainage, casing, the areas around the fan — the spots that get skipped when someone's rushing.</p>
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="process-num">04</div>
+        <div>
+          <h3>Test it running</h3>
+          <p>We run the unit before we go, so you know it's actually working properly — not just looking clean.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="vents light"></div>
+
+<section class="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow-dark" style="color:var(--accent-500);">WHAT WE DO</div>
+      <h2>Services</h2>
+      <p>If it's not listed and you're not sure, message us — happy to have a look.</p>
+    </div>
+    <div class="service-grid reveal">
+      <div class="service-card">
+        <div class="vent-icon"></div>
+        <h3>Split System Clean</h3>
+        <p>Filters, coils, and casing — the standard deep clean for wall-mounted units.</p>
+      </div>
+      <div class="service-card">
+        <div class="vent-icon"></div>
+        <h3>Filter Replacement</h3>
+        <p>Worn or damaged filters swapped out where a clean alone won't cut it.</p>
+      </div>
+      <div class="service-card">
+        <div class="vent-icon"></div>
+        <h3>Mould &amp; Odour Treatment</h3>
+        <p>For units with a persistent musty smell that a standard clean hasn't fixed.</p>
+      </div>
+      <div class="service-card">
+        <div class="vent-icon"></div>
+        <h3>Pre-Season Check</h3>
+        <p>A once-over before summer or winter so the unit isn't working harder than it needs to.</p>
+      </div>
+      <div class="service-card">
+        <div class="vent-icon"></div>
+        <h3>Just Moved In?</h3>
+        <p>Aircon left unused for a while builds up the same way — worth a clean before you rely on it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="area">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow-dark">WHERE WE WORK</div>
+      <h2>Capalaba &amp; the Bayside area</h2>
+      <p>Based in Capalaba, servicing the surrounding Bayside suburbs.</p>
+    </div>
+    <div class="chip-row reveal">
+      <span class="chip center">Capalaba</span>
+      <span class="chip">Wynnum</span>
+      <span class="chip">Manly</span>
+      <span class="chip">Cleveland</span>
+      <span class="chip">Alexandra Hills</span>
+      <span class="chip">Victoria Point</span>
+      <span class="chip">Redland Bay</span>
+      <span class="chip">Birkdale</span>
+      <span class="chip">Thorneside</span>
+      <span class="chip">Not sure if we cover you? Just ask →</span>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow-dark">FROM THE JOB</div>
+      <h2>Real work, real units</h2>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item">
+        <img src="assets/filters.jpg" alt="Dusty filter panels removed from a unit">
+        <p class="photo-caption">FILTER PANELS — BEFORE THE CLEAN</p>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/coils.jpg" alt="Close-up of aircon coil during cleaning">
+        <p class="photo-caption">COIL DETAIL — THIS IS WHAT MOST QUICK CLEANS SKIP</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cta-block reveal">
+      <h2>Book your clean</h2>
+      <p>Message us on Facebook or give us a call — happy to answer questions before you book too.</p>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="https://m.me/trueblueairconcleaning" target="_blank" rel="noopener">Message Us</a>
+        <a class="btn btn-outline" href="tel:0406606348">Call 0406 606 348</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span style="display:flex; align-items:center; gap:10px;">
+        <img src="assets/logo.png" alt="" style="height:28px; width:28px;">
+        True Blue Aircon Cleaning — Capalaba &amp; Bayside, Brisbane
+      </span>
+      <div class="socials">
+        <a href="https://www.facebook.com/trueblueairconcleaning" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/trueblue.aircon2026" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold:0.15});
+    revealEls.forEach(el=>io.observe(el));
+  } else {
+    revealEls.forEach(el=>el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>
