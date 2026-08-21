@@ -229,6 +229,58 @@
   }
   .process-item p{color:#45555F; font-size:15.5px; max-width:560px;}
 
+  /* Seasonal tips */
+  .season-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:1px;
+    background:#D7E2E8;
+    margin-bottom:56px;
+  }
+  @media(min-width:760px){ .season-grid{grid-template-columns:repeat(4,1fr);} }
+  .season-card{
+    background:var(--ice-100);
+    padding:24px 22px;
+  }
+  .season-name{
+    font-family:'Barlow Condensed',sans-serif; font-weight:700; text-transform:uppercase;
+    font-size:20px; color:var(--navy-900); letter-spacing:0.02em; margin-bottom:10px;
+  }
+  .season-card p{font-size:14.5px; color:#45555F;}
+  .winter-tip{
+    background:var(--white);
+    border:1px solid #D7E2E8;
+    padding:36px;
+  }
+  .winter-tip > p{font-size:16px; color:#33454F; margin-bottom:18px; max-width:640px;}
+  .tip-list{
+    list-style:none;
+    display:grid; gap:12px;
+    max-width:640px;
+  }
+  .tip-list li{
+    font-size:15px; color:#33454F;
+    padding-left:22px;
+    position:relative;
+  }
+  .tip-list li::before{
+    content:"";
+    position:absolute; left:0; top:8px;
+    width:10px; height:2px;
+    background:var(--blue-500);
+  }
+
+  /* About the owner */
+  .about-grid{
+    display:grid; grid-template-columns:1fr; gap:40px; align-items:center;
+    padding:72px 0;
+  }
+  @media(min-width:860px){ .about-grid{grid-template-columns:1fr 1fr; gap:56px;} }
+  .about-copy p{font-size:16.5px; color:#33454F; margin-bottom:16px; max-width:520px;}
+  .about-photo img{
+    border-radius:2px;
+    filter:saturate(0.85) contrast(1.05);
+    box-shadow:0 24px 48px -20px rgba(10,31,51,0.35);
+  }
+
   /* Services */
   .services{background:var(--navy-900); color:var(--white);}
   .services .section-head h2{color:var(--white);}
@@ -414,6 +466,48 @@
   </div>
 </section>
 
+<section class="problem" style="padding-top:72px; padding-bottom:72px;">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow-dark">AIRCON CARE TIPS</div>
+      <h2>Best time to clean, by season</h2>
+      <p>A bit of timing goes a long way — here's roughly when to book, and why.</p>
+    </div>
+    <div class="season-grid reveal">
+      <div class="season-card">
+        <div class="season-name">Spring</div>
+        <p>The best time for a full clean before summer demand kicks in. Gets dust and any mould from a unit that's been sitting idle out before you're relying on it daily.</p>
+      </div>
+      <div class="season-card">
+        <div class="season-name">Summer</div>
+        <p>Heaviest use of the year — this is when dust and grime build up fastest. If it's running daily, a mid-season check keeps it from working harder than it needs to.</p>
+      </div>
+      <div class="season-card">
+        <div class="season-name">Autumn</div>
+        <p>A good time for a wind-down clean after a hard summer, especially before switching over to heating mode for winter.</p>
+      </div>
+      <div class="season-card">
+        <div class="season-name">Winter</div>
+        <p>Lower on the priority list for cleaning, but worth a filter check if you're running the unit in heating mode regularly.</p>
+      </div>
+    </div>
+
+    <div class="winter-tip reveal">
+      <div class="section-head" style="margin-bottom:16px;">
+        <div class="eyebrow-dark">A NOTE ON WINTER</div>
+        <h2 style="font-size:clamp(24px,3.4vw,32px);">Managing dry air from reverse-cycle heating</h2>
+      </div>
+      <p>Reverse-cycle systems are efficient for heating, but running one for long stretches can dry out the air in a room — which is often what's behind dry skin, a scratchy throat, or extra static in winter. A few things help:</p>
+      <ul class="tip-list">
+        <li>Keep filters clean — a clogged filter makes the unit work harder and recirculates more dust into already-dry air.</li>
+        <li>Avoid cranking the heat higher than you need — a couple of degrees lower with a blanket on hand goes a long way.</li>
+        <li>Air the room out for a few minutes a day rather than running the unit sealed up non-stop.</li>
+        <li>A bowl of water near the unit or a small humidifier can help offset the dryness in smaller rooms.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <div class="vents light"></div>
 
 <section class="services">
@@ -453,6 +547,25 @@
         <div class="vent-icon"></div>
         <h3>End of Lease &amp; Bond Cleans</h3>
         <p>Moving out? A lot of real estates and property managers expect the aircon cleaned as part of getting your bond back. We can do it to a standard that holds up at inspection.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="area" style="padding-bottom:0;">
+  <div class="wrap">
+    <div class="about-grid reveal">
+      <div class="about-copy">
+        <div class="section-head" style="margin-bottom:20px;">
+          <div class="eyebrow-dark">WHO'S DOING THE WORK</div>
+          <h2>Meet John.</h2>
+        </div>
+        <p>John grew up on Norfolk Island — a small island in the Pacific where everyone knows everyone, because on an island that small, everyone actually does. There's no anonymous customer, and no next town over to build a reputation in. You know the person you're serving, and they'll remember how you treated them.</p>
+        <p>That's still how John runs every job today. Whoever he's working for gets his full attention — not rushed, not treated as one of many, just the job in front of him done properly.</p>
+      </div>
+      <div class="about-photo">
+        <img src="assets/john.jpg" alt="John, owner of True Blue Aircon Cleaning, at home in Capalaba">
+        <p class="photo-caption">JOHN — OWNER, TRUE BLUE AIRCON CLEANING</p>
       </div>
     </div>
   </div>
@@ -512,7 +625,7 @@
     <div class="footer-bottom">
       <span style="display:flex; align-items:center; gap:10px;">
         <img src="assets/logo.png" alt="" style="height:28px; width:28px;">
-        True Blue Aircon Cleaning — Capalaba &amp; Bayside, Brisbane
+        True Blue Aircon Cleaning — Capalaba &amp; Bayside, Brisbane · ABN 92 686 055 879
       </span>
       <div class="socials">
         <a href="https://www.facebook.com/trueblueairconcleaning" target="_blank" rel="noopener">Facebook</a>
